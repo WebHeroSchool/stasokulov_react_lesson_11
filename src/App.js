@@ -57,6 +57,9 @@ class App extends Component {
             <p>
               {'Пытаюсь вывести true:'}{false||true}
             </p>
+            <p style={{color: 'yellow'}} >
+              Этот блок для демонстрации вставки объекта со стилями
+            </p>
             
           </div>
         </header>
