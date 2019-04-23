@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import logo from './logo.svg';
 import './App.css';
+import {count, lenght} from './number.js';
 
 class App extends Component {
   render() {
@@ -9,8 +10,13 @@ class App extends Component {
         <header className="App-header">
           <img src={logo} className="App-logo" alt="logo" />
           <p>
-            Отредактировал <code>src/App.js</code> and save to reload.
+            Edit <code>src/App.js</code> and save to reload.
           </p>
+          <div>
+            Общая длинна: {count*lenght}
+          </div>
+
+
           <a
             className="App-link"
             href="https://reactjs.org"
