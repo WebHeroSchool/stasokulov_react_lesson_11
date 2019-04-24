@@ -1,6 +1,6 @@
 import React from 'react';
 import InputItem from '../InputItem/InputItem';
-import ItemsList from '../ItemsList/ItemsList.js';
+import ItemsList from '../ItemsList/ItemsList';
 import Footer from '../Footer/Footer';
 
 const App = () => (
