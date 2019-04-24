@@ -8,9 +8,18 @@ import styles from './App.module.css';
 
 const App = () => {
   const todos = [
-    {value: 'Первое дело'},
-    {value: 'Второе дело'},
-    {value: 'Третье дело'},
+    {
+      value: 'Первое дело',
+      isDone: true
+    },
+    {
+      value: 'Второе дело',
+      isDone: false
+    },
+    {
+      value: 'Третье дело',
+      isDone: true
+    },
   ];
 
   return (
