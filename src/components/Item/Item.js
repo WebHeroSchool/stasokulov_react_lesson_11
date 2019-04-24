@@ -1,5 +1,5 @@
 import React from 'react';
 
-const Item = () => (<span>Важное дело</span>);
+const Item = ({todoText}) => (<span>{todoText}</span>);
 
 export default Item;
