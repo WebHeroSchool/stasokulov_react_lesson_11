@@ -3,10 +3,11 @@ import InputItem from '../InputItem/InputItem';
 import ItemsList from '../ItemsList/ItemsList';
 import Footer from '../Footer/Footer';
 
-const todos = {
-  todo1: 'Первое дело',
-  todo2: 'Второе дело'
-};
+const todos = [
+  {value: 'Первое дело'},
+  {value: 'Второе дело'},
+  {value: 'Третье дело'},
+];
 
 const App = () => (
   <div>

@@ -3,9 +3,7 @@ import Item from '../Item/Item';
 
 const ItemsList = ({items}) => (
     <ul>
-        <li><Item todoText={items.todo1} /></li>
-        <li><Item todoText={items.todo2} /></li>
-        <li><Item todoText={'qwer'} /></li>
+        { items.map(item => <li key={item.value}><Item todoText={item.value} /></li>) }
     </ul>
 );
 
