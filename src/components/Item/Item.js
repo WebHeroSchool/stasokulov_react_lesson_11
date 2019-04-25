@@ -9,13 +9,13 @@ import Checkbox from '@material-ui/core/Checkbox';
 import IconButton from '@material-ui/core/IconButton';
 import Divider from '@material-ui/core/Divider';
 
-const Item = ({value, isDone, onClickDone}) => (
+const Item = ({value, isDone, id, onClickDone}) => (
     <div>
         <ListItem key={value}>
                 <Checkbox
                     checked={isDone}
                     tabIndex={-1}
-                    onClick={() => onClickDone(isDone)}
+                    onClick={() => onClickDone(id)}
                 />
                 <ListItemText primary={value} classes={{
                     root: isDone && styles.done

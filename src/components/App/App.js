@@ -16,22 +16,33 @@ class App extends React.Component {
     todos: [
       {
         value: 'Первое дело',
-        isDone: true
+        isDone: true,
+        id: 1,
       },
       {
         value: 'Второе дело',
-        isDone: false
+        isDone: false,
+        id: 2,
       },
       {
         value: 'Третье дело',
-        isDone: true
+        isDone: true,
+        id: 3,
       },
     ],
+    count: 6,
   };
 
-  onClickDone = (isDone) => {
-    console.log(isDone);
-  }
+  onClickDone = id => {
+    const newItemList = this.state.todos.map(item => {
+      const newItem = {...item};
+      if (item.id === id) {
+        newItem.isDone = !item.isDone;
+      };
+      return newItem;
+    });
+    this.setState({todos: newItemList});
+  };
 
   render() {
     return (
@@ -41,7 +52,7 @@ class App extends React.Component {
             <Header />
             <InputItem />
             <ItemsList items={this.state.todos} onClickDone={this.onClickDone} />
-            <Footer count={3} />
+            <Footer count={this.state.count} />
           </CardContent>
         </Card>
       </div>
