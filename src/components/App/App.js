@@ -12,8 +12,8 @@ import Card from '@material-ui/core/Card';
 import CardContent from '@material-ui/core/CardContent';
 
 class App extends React.Component {
-  render() {
-    const todos = [
+  state = {
+    todos: [
       {
         value: 'Первое дело',
         isDone: true
@@ -26,7 +26,11 @@ class App extends React.Component {
         value: 'Третье дело',
         isDone: true
       },
-    ];
+    ],
+  };
+
+  render() {
+
   
     return (
       <div className={styles.wrap}>
@@ -34,7 +38,7 @@ class App extends React.Component {
           <CardContent>
             <Header />
             <InputItem />
-            <ItemsList items={todos} />
+            <ItemsList items={this.state.todos} />
             <Footer count={3} />
           </CardContent>
         </Card>
