@@ -29,16 +29,18 @@ class App extends React.Component {
     ],
   };
 
-  render() {
+  onClickDone = (isDone) => {
+    console.log(isDone);
+  }
 
-  
+  render() {
     return (
       <div className={styles.wrap}>
         <Card>
           <CardContent>
             <Header />
             <InputItem />
-            <ItemsList items={this.state.todos} />
+            <ItemsList items={this.state.todos} onClickDone={this.onClickDone} />
             <Footer count={3} />
           </CardContent>
         </Card>

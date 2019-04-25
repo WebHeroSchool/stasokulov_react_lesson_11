@@ -2,10 +2,10 @@ import React from 'react';
 import List from '@material-ui/core/List';
 import Item from '../Item/Item';
 
-const ItemsList = ({items}) => (
+const ItemsList = ({items, onClickDone}) => (
     <List>
         {items.map(item => (
-            <Item item = {item}/>
+            <Item value={item.value} isDone={item.isDone} onClickDone={onClickDone} />
         ))}
     </List>
 );
