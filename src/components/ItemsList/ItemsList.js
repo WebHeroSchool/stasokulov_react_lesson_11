@@ -1,13 +1,13 @@
 import React from 'react';
+import List from '@material-ui/core/List';
 import Item from '../Item/Item';
 
 const ItemsList = ({items}) => (
-    <ul>
-        { items.map(item => 
-        <li key={item.value}>
-        <Item todoText={item.value} isDone={item.isDone} />
-        </li>) }
-    </ul>
+    <List>
+        {items.map(item => (
+            <Item item = {item}/>
+        ))}
+    </List>
 );
 
 export default ItemsList;
