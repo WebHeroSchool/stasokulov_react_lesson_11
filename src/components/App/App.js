@@ -46,12 +46,8 @@ class App extends React.Component {
   };
 
   onClickDelete = id => {
-    const newItemList = [];
-    this.state.todos.map(item => {
-      const newItem = {...item};
-      if (item.id !== id) {
-        newItemList.push(newItem);
-      };
+    const newItemList = this.state.todos.filter(item => {
+      return item.id !== id;
     });
     this.setState({todos: newItemList});
   }
