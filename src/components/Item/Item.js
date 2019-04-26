@@ -9,7 +9,7 @@ import Checkbox from '@material-ui/core/Checkbox';
 import IconButton from '@material-ui/core/IconButton';
 import Divider from '@material-ui/core/Divider';
 
-const Item = ({value, isDone, id, onClickDone}) => (
+const Item = ({value, isDone, id, onClickDone, onClickDelete}) => (
     <div>
         <ListItem key={value}>
                 <Checkbox
@@ -21,8 +21,8 @@ const Item = ({value, isDone, id, onClickDone}) => (
                     root: isDone && styles.done
                 }}/>
                 <ListItemSecondaryAction>
-                    <IconButton aria-label="Delete">
-                        <DeleteIcon />
+                    <IconButton aria-label="Delete" onClick={ () => onClickDelete(id) }>
+                        <DeleteIcon  />
                     </IconButton>
                 </ListItemSecondaryAction>
         </ListItem>

@@ -30,6 +30,7 @@ class App extends React.Component {
         id: 3,
       },
     ],
+
     count: 6,
   };
 
@@ -44,6 +45,17 @@ class App extends React.Component {
     this.setState({todos: newItemList});
   };
 
+  onClickDelete = id => {
+    const newItemList = [];
+    this.state.todos.map(item => {
+      const newItem = {...item};
+      if (item.id !== id) {
+        newItemList.push(newItem);
+      };
+    });
+    this.setState({todos: newItemList});
+  }
+
   render() {
     return (
       <div className={styles.wrap}>
@@ -51,7 +63,11 @@ class App extends React.Component {
           <CardContent>
             <Header />
             <InputItem />
-            <ItemsList items={this.state.todos} onClickDone={this.onClickDone} />
+            <ItemsList
+              items={this.state.todos}
+              onClickDone={this.onClickDone}
+              onClickDelete={this.onClickDelete}
+            />
             <Footer count={this.state.count} />
           </CardContent>
         </Card>

@@ -2,7 +2,7 @@ import React from 'react';
 import List from '@material-ui/core/List';
 import Item from '../Item/Item';
 
-const ItemsList = ({items, onClickDone}) => (
+const ItemsList = ({items, onClickDone, onClickDelete}) => (
     <List>
         {items.map(item => (
             <Item
@@ -10,6 +10,7 @@ const ItemsList = ({items, onClickDone}) => (
                 isDone={item.isDone}
                 id={item.id}
                 onClickDone={onClickDone}
+                onClickDelete={onClickDelete}
             />
         ))}
     </List>
