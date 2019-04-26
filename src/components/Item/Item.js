@@ -17,9 +17,12 @@ const Item = ({value, isDone, id, onClickDone, onClickDelete}) => (
                     tabIndex={-1}
                     onClick={() => onClickDone(id)}
                 />
-                <ListItemText primary={value} classes={{
-                    root: isDone && styles.done
-                }}/>
+                <ListItemText
+                    primary={value}
+                    classes={{
+                        root: isDone && styles.done
+                    }}
+                />
                 <ListItemSecondaryAction>
                     <IconButton aria-label="Delete" onClick={ () => onClickDelete(id) }>
                         <DeleteIcon  />
