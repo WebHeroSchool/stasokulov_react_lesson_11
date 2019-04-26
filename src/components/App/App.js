@@ -30,7 +30,6 @@ class App extends React.Component {
 
     input: {
       value: '',
-      label: 'Добавить задачу',
       error: false,
     },
 
@@ -96,7 +95,6 @@ class App extends React.Component {
             <Header />
             <InputItem
               value={this.state.input.value}
-              label={this.state.input.label}
               error={this.state.input.error}
               onChange={this.onChangeInput}
             />
