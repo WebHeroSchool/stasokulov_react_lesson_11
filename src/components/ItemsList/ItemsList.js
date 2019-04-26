@@ -1,13 +1,19 @@
 import React from 'react';
+import List from '@material-ui/core/List';
 import Item from '../Item/Item';
 
-const ItemsList = ({items}) => (
-    <ul>
-        { items.map(item => 
-        <li key={item.value}>
-        <Item todoText={item.value} isDone={item.isDone} />
-        </li>) }
-    </ul>
+const ItemsList = ({items, onClickDone, onClickDelete}) => (
+    <List>
+        {items.map(item => (
+            <Item
+                value={item.value}
+                isDone={item.isDone}
+                id={item.id}
+                onClickDone={onClickDone}
+                onClickDelete={onClickDelete}
+            />
+        ))}
+    </List>
 );
 
 export default ItemsList;
