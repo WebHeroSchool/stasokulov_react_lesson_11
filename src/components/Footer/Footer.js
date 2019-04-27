@@ -7,4 +7,8 @@ const Footer = ({count}) => (
     </Typography>
 );
 
+Footer.defaultProps = {
+    count: 0
+};
+
 export default Footer;
