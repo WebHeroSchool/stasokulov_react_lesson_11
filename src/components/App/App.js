@@ -70,10 +70,11 @@ class App extends React.Component {
       this.setState({input: newInput});
     } else {
       //Создаем новый объект задачи
+      let newNumTask = this.state.numTask;
       const newItem = {};
       newItem.value = this.state.input.value;
       newItem.isDone = false;
-      newItem.id = ++this.state.numTask;
+      newItem.id = ++newNumTask;
       //Клонируем массив задач, добавляем в конец новую задачу и переписываем массив в state
       const newTodos = this.state.todos.slice();
       newTodos.push(newItem);
@@ -83,7 +84,12 @@ class App extends React.Component {
       newInput.value = '';
       newInput.label = 'Добавить задачу';
       newInput.error = false;
-      this.setState({input: newInput});
+      this.setState(
+        {
+          input: newInput,
+          numTask: newNumTask,
+        }
+      );
     }
   }
 
