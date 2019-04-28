@@ -9,9 +9,27 @@ import IconButton from '@material-ui/core/IconButton';
 import Divider from '@material-ui/core/Divider';
 import PropTypes from 'prop-types';
 
-const Item = ({value, isDone, id, onClickDone, onClickDelete}) => (
-    <div>
-        <ListItem >
+
+class Item extends React.Component {
+    componentWillMount() {
+        console.log('componentWillMount');
+    }
+    componentDidMount() {
+        console.log('componentDidMount');
+    }
+    componentDidUpdate() {
+        console.log('componentDidUpdate');
+    }
+    componentWillUnmount() {
+        console.log('componentWillUnmount');
+    }
+
+    render() {
+        const {value, isDone, id, onClickDone, onClickDelete} = this.props;
+
+        return (
+        <div>
+            <ListItem >
                 <Checkbox
                     checked={isDone}
                     tabIndex={-1}
@@ -28,10 +46,12 @@ const Item = ({value, isDone, id, onClickDone, onClickDelete}) => (
                         <DeleteIcon  />
                     </IconButton>
                 </ListItemSecondaryAction>
-        </ListItem>
-        <Divider light />
-    </div>
-);
+            </ListItem>
+            <Divider light />
+        </div>
+        );
+    }
+}
 
 Item.defaultProps = {
     value: "Задача без имени"
