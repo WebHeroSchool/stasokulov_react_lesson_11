@@ -17,8 +17,8 @@ const InputItem = ({value, error, onChange}) => (
 
 InputItem.propTypes = {
     value: PropTypes.oneOfType ([
-        PropTypes.string,
-        PropTypes.number
+        PropTypes.string.isRequired,
+        PropTypes.number.isRequired
     ])
 };
     

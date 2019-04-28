@@ -53,7 +53,7 @@ Item.defaultProps = {
 };
 
 Item.propTypes = {
-    value: PropTypes.string
+    value: PropTypes.string.isRequired
 };
 
 export default Item;
