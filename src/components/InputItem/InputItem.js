@@ -1,5 +1,6 @@
 import React from 'react';
 import TextField from '@material-ui/core/TextField';
+import PropTypes from 'prop-types';
 
 const InputItem = ({value, error, onChange}) => (
     <div>
@@ -13,5 +14,14 @@ const InputItem = ({value, error, onChange}) => (
         />
     </div>
 );
+
+InputItem.propTypes = {
+    value: PropTypes.oneOfType ([
+        PropTypes.string,
+        PropTypes.number
+    ])
+};
+    
+
 
 export default InputItem;
