@@ -1,12 +1,24 @@
-.wrap {
-    margin: auto;
-    width: 300px;
-}
-
-.title {
+body {
+    padding-top: 36px;
+    background: #eee;
     font-family: Helvetica;
 }
 
-.width100 {
-    width: 100%;
+.wrap {
+    display: grid;
+    grid-template-areas: 'sidebar ... content content';
+    margin: auto;
+    width: 500px;
+}
+
+.link {
+    text-decoration: none;
+}
+
+.sidebar {
+    grid-area: sidebar;
+}
+
+.content {
+    grid-area: content;
 }
