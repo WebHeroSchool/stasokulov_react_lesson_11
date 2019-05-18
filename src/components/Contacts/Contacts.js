@@ -1,9 +1,12 @@
 import React from 'react';
+import CardContent from '@material-ui/core/CardContent';
 
-const About = () => (
-    <div>
-        Контакты
-    </div>
+const Contacts = () => (
+    <CardContent>
+        <h1>
+            Контакты
+        </h1>
+    </CardContent>
 );
 
-export default About;
+export default Contacts;
